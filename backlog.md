@@ -1,14 +1,14 @@
 # Backlog
 
 - [ ] README.md erstellen
-- [p] Autor anpassen in `package.json`
+- [L] Autor anpassen in `package.json`
 - [ ] Dokumentation vollständig durchlesen
 - [ ] Name des Spiels ändern
-- [ ] Spielidee auf der Webseite beschreiben (kann später noch erweitert werden)
+- [L] Spielidee auf der Webseite beschreiben (kann später noch erweitert werden)
 - [ ] Bewegung des Spielcharakters verstehen (`onKeyDown` und ähnliche)
 - [ ] Spritesheets verstehen (Dokumentation und die Datei `src/sprites.js`)
-- [ ] Eigene Spritesheets erstellen
+- [L] Eigene Spritesheets erstellen
 - [ ] Karten verstehen und verändern (`src/maps.js`)
 - [ ] Spielkomponenten verstehen, und neue erstellen (`src/player.js` und
       `src/maps.js`)
-- [ ] Präsentation für das Endprodukt in (`pres.html`) anpassen
+- [L] Präsentation für das Endprodukt in (`pres.html`) anpassen
