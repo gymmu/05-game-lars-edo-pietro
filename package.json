@@ -1,6 +1,6 @@
 {
   "name": "05-game-project",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Einstiegspunkt in ein Spielprojekt.",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "format": "prettier --write src/"
   },
   "keywords": [],
-  "author": "Cedric Geissmann",
+  "author": "Lars Burkard, Eduard Gabrielyan, Pietro D'Ambrosio",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.57.0",
