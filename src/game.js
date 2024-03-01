@@ -77,7 +77,7 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    player.hurt(obstacle.dmgAmount)
+    player.hurt(obstacle.dmgAmount * 10)
     if (obstacle.isConsumable === true) {
       obstacle.destroy()
     }
@@ -110,17 +110,17 @@ function createHPBar() {
 
   const x = 50
   const y = 20
-  const HP_BAR_WIDTH = 100
+  const HP_BAR_WIDTH = 125
   const HP_BAR_HEIGHT = 10
 
   // Dies ist das UI-Element das den Rest der dazu gehört einpackt.
   const bar = k.add([k.pos(x, y), k.fixed(), k.z(10), "hp-bar"])
 
-  bar.add([k.text("HP", { size: 20 }), k.anchor("right")])
+  bar.add([k.text("HP", { size: 28 }), k.anchor("right")])
 
   bar.add([
     k.rect(HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.outline(4, k.GREEN.darken(100)),
+    k.outline(3, k.WHITE.darken(1)),
     k.color(0, 0, 0),
     k.anchor("left"),
     k.pos(10, 0),
@@ -129,7 +129,7 @@ function createHPBar() {
   // Dieser Teil zeigt den grünenden Balken an.
   bar.add([
     k.rect((player.hp() / player.max_hp) * HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.color(0, 255, 0),
+    k.color(255, 0, 255),
     k.anchor("left"),
     k.pos(10, 0),
     {
@@ -137,6 +137,19 @@ function createHPBar() {
       update() {
         const player = getPlayer()
         this.width = (player.hp() / player.max_hp) * HP_BAR_WIDTH
+      },
+    },
+  ])
+
+  bar.add([
+    k.text(`${player.hp()}/${player.max_hp}`, { size: 12 }),
+    k.anchor("left"),
+    k.pos(50, 1.5),
+    {
+      // Damit wird in jedem Frame überprüft ob der HP-Balken angepasst werden muss.
+      update() {
+        const player = getPlayer()
+        this.text = `${player.hp()}/${player.max_hp}`
       },
     },
   ])
