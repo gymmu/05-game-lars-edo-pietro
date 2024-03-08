@@ -1,4 +1,5 @@
 import { k } from "./game.js"
+import { TILESIZE } from "./globals.js"
 import { getPlayer } from "./player.js"
 
 /**
@@ -9,26 +10,26 @@ import { getPlayer } from "./player.js"
 export function loadKeyboardJumpAndRun() {
   const player = getPlayer()
   // Wenn die Taste gedrückt wird, dann soll die Animation abgespielt werden.
-  k.onKeyPress("left", () => {
+  k.onKeyPress("a", () => {
     player.play("runLeft")
   })
   // Solange wie die Taste gedrückt wird, wird der Spieler in jedem Frame nach
   // links verschoben.
-  k.onKeyDown("left", () => {
+  k.onKeyDown("a", () => {
     player.move(k.LEFT.scale(player.speed))
   })
   // Wenn die Taste losgelassen wird, wird die idleAnimation abgespielt.
-  k.onKeyRelease("left", () => {
+  k.onKeyRelease("a", () => {
     player.play("idleLeft")
   })
 
-  k.onKeyPress("right", () => {
+  k.onKeyPress("d", () => {
     player.play("runRight")
   })
-  k.onKeyDown("right", () => {
+  k.onKeyDown("d", () => {
     player.move(k.RIGHT.scale(player.speed))
   })
-  k.onKeyRelease("right", () => {
+  k.onKeyRelease("d", () => {
     player.play("idleRight")
   })
 
@@ -48,43 +49,54 @@ export function loadKeyboardJumpAndRun() {
  */
 export function loadKeyboardRPG() {
   const player = getPlayer()
-  k.onKeyPress("left", () => {
+  k.onKeyPress("a", () => {
     player.play("runLeft")
   })
-  k.onKeyDown("left", () => {
+  k.onKeyDown("a", () => {
     player.move(k.LEFT.scale(player.speed))
   })
-  k.onKeyRelease("left", () => {
+  k.onKeyRelease("a", () => {
     player.play("idleLeft")
   })
 
-  k.onKeyPress("right", () => {
+  k.onKeyPress("d", () => {
     player.play("runRight")
   })
-  k.onKeyDown("right", () => {
+  k.onKeyDown("d", () => {
     player.move(k.RIGHT.scale(player.speed))
   })
-  k.onKeyRelease("right", () => {
+  k.onKeyRelease("d", () => {
     player.play("idleRight")
   })
 
-  k.onKeyPress("up", () => {
+  k.onKeyPress("w", () => {
     player.play("runUp")
   })
-  k.onKeyDown("up", () => {
+  k.onKeyDown("w", () => {
     player.move(k.UP.scale(player.speed))
   })
-  k.onKeyRelease("up", () => {
+  k.onKeyRelease("w", () => {
     player.play("idleUp")
   })
 
-  k.onKeyPress("down", () => {
+  k.onKeyPress("s", () => {
     player.play("runDown")
   })
-  k.onKeyDown("down", () => {
+  k.onKeyDown("s", () => {
     player.move(k.DOWN.scale(player.speed))
   })
-  k.onKeyRelease("down", () => {
+  k.onKeyRelease("s", () => {
     player.play("idleDown")
   })
 }
+
+k.onKeyPress("e", () => {
+  const pos = player.pos
+  k.add([
+    k.sprite("stone"),
+    k.pos(pos.x + TILESIZE, pos.y),
+    k.area(),
+    k.move(k.RIGHT, 300),
+    "projectile",
+  ])
+})
