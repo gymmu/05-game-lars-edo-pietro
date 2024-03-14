@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgb(255, 136, 0);
+  background-color: rgb(104, 104, 104);
   color: white;
   padding: 0;
   margin: 0;
@@ -13,10 +13,11 @@ body {
 
 h1 {
   font-size: 3rem;
+  color: white;
 }
 
-h2 {
-  font-size: 2rem;
+.beschreibung {
+  text-align: center;
 }
 
 main {
@@ -53,7 +54,7 @@ main > section > h2 {
 }
 
 .start-btn:hover {
-  box-shadow: 2px 2px 5px violet;
+  box-shadow: 2px 2px 5px rgb(255, 72, 72);
 }
 
 .margin-tb {
@@ -93,7 +94,5 @@ main > section > h2 {
 }
 
 .text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  width: 100%;
+  text-align: center;
 }
