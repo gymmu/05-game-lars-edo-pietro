@@ -56,6 +56,6 @@ export default function loadSprites() {
     ground: { x: 921, y: 1, width: TS, height: TS },
     lamp_off: { x: 437, y: 383, width: TS, height: TS },
     lamp_on: { x: 505, y: 383, width: TS, height: TS },
-    böse_kek: { x: 921, y: 383, width: TS, height: TS },
+    boese_kek: { x: 1, y: 1, width: TS, height: TS },
   })
 }
