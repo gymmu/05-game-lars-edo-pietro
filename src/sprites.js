@@ -47,4 +47,15 @@ export default function loadSprites() {
     cave: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
     wall: { x: 3 * TS, y: 1 * TS, width: TS, height: TS },
   })
+
+  k.loadSpriteAtlas("sprites/spritesheet.png", {
+    castle: { x: 1, y: 1, width: TS, height: TS },
+    book_1: { x: 437, y: 1, width: TS, height: TS },
+    book_2: { x: 685, y: 1, width: TS, height: TS },
+    book_3: { x: 685, y: 313, width: TS, height: TS },
+    ground: { x: 921, y: 1, width: TS, height: TS },
+    lamp_off: { x: 437, y: 383, width: TS, height: TS },
+    lamp_on: { x: 505, y: 383, width: TS, height: TS },
+    böse_kek: { x: 921, y: 383, width: TS, height: TS },
+  })
 }
