@@ -36,6 +36,17 @@ export function loadKeyboardJumpAndRun() {
   k.onKeyPress("space", () => {
     player.jump()
   })
+
+  k.onKeyPress("e", () => {
+    const pos = player.pos
+    k.add([
+      k.sprite("stone"),
+      k.pos(pos.x + TILESIZE, pos.y),
+      k.area(),
+      k.move(k.RIGHT, 300),
+      "projectile",
+    ])
+  })
 }
 
 /**
@@ -89,14 +100,3 @@ export function loadKeyboardRPG() {
     player.play("idleDown")
   })
 }
-
-k.onKeyPress("e", () => {
-  const pos = player.pos
-  k.add([
-    k.sprite("stone"),
-    k.pos(pos.x + TILESIZE, pos.y),
-    k.area(),
-    k.move(k.RIGHT, 300),
-    "projectile",
-  ])
-})

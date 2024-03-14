@@ -77,7 +77,7 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    player.hurt(obstacle.dmgAmount * 10)
+    player.hurt(obstacle.dmgAmount * 1)
     if (obstacle.isConsumable === true) {
       obstacle.destroy()
     }
@@ -89,7 +89,7 @@ export function addGeneralGameLogic() {
    */
   player.on("heal", () => {
     const oldSpeed = player.speed
-    player.speed *= 2
+    player.speed *= 1.5
     k.wait(1, () => {
       player.speed = oldSpeed
     })
