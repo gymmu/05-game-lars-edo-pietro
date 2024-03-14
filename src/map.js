@@ -92,3 +92,36 @@ export async function generateMapRPG(mapfile) {
     }
   }
 }
+
+export async function generateCastleRPG(mapfile) {
+  const map = await fetch(mapfile)
+  const mapContent = await map.text()
+  const lines = mapContent.split("\n")
+  for (let y = 0; y < lines.length; y++) {
+    const line = lines[y]
+    for (let x = 0; x < line.length; x++) {
+      const char = line[x]
+
+      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
+      // hat.
+      GameObjects.backgroundRPG(x, y)
+
+      if (char === "p") {
+        const player = getPlayer()
+        player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "s") {
+        GameObjects.groundRPG(x, y)
+      } else if (char === "w") {
+        GameObjects.book_1RPG(x, y)
+      } else if (char === "c") {
+        GameObjects.book_2RPG(x, y)
+      } else if (char === "T") {
+        GameObjects.book_3RPG(x, y)
+      } else if (char === "t") {
+        GameObjects.lamp_offRPG(x, y)
+      } else if (char === "f") {
+        GameObjects.lamp_onRPG(x, y)
+      }
+    }
+  }
+}
