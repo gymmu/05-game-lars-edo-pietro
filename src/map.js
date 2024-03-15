@@ -123,6 +123,8 @@ export async function generateCastleRPG(mapfile) {
         GameObjects.lamp_offRPG(x, y)
       } else if (char === "f") {
         GameObjects.lamp_onRPG(x, y)
+      } else if (char === "m") {
+        GameObjects.ground2RPG(x, y)
       }
     }
   }
