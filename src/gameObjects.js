@@ -267,3 +267,12 @@ export function lamp_offRPG() {
     k.area(),
   ])
 }
+
+export function ground2RPGRPG() {
+  k.add([
+    k.sprite("ground_2"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
