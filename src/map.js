@@ -48,6 +48,8 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.flowerJumpAndRun(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
+      } else if (char === "t") {
+        GameObjects.treeJumpAndRun(x, y)
       }
     }
   }
@@ -121,6 +123,8 @@ export async function generateCastleRPG(mapfile) {
         GameObjects.lamp_offRPG(x, y)
       } else if (char === "f") {
         GameObjects.lamp_onRPG(x, y)
+      } else if (char === "m") {
+        GameObjects.ground2RPG(x, y)
       }
     }
   }
