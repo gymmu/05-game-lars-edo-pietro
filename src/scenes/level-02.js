@@ -12,6 +12,7 @@ import "./level-03.js"
 k.scene("level-02", async () => {
   k.setGravity(0)
   loadKeyboardRPG()
+  k.camScale(2)
 
   await generateMapRPG("maps/level-02.txt")
 

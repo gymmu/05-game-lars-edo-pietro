@@ -32,7 +32,7 @@ import { getPlayer } from "./player.js"
  */
 export const k = kaboom({
   font: "sinko",
-  background: [0, 0, 0],
+  background: [135, 206, 235],
   debug: true,
   height: TILESIZE * 16,
   width: TILESIZE * 30,
