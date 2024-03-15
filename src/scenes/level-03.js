@@ -1,5 +1,5 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import { generateMapRPG } from "../map.js"
+import { generateCastleRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
 import "./finish.js"
