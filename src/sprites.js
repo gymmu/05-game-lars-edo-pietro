@@ -50,8 +50,8 @@ export default function loadSprites() {
 
   k.loadSpriteAtlas("sprites/spritesheet.png", {
     castle: { x: 2 * TS, y: 2 * TS, width: TS, height: TS },
-    book_1: { x: 2 * TS, y: 0 * TS, width: TS, height: TS },
-    book_2: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
+    book_1: { x: 3 * TS, y: 2 * TS, width: TS, height: TS },
+    book_2: { x: 685, y: 1, width: TS, height: TS },
     book_3: { x: 685, y: 313, width: TS, height: TS },
     ground: { x: 921, y: 1, width: TS, height: TS },
     ground_2: { x: 0, y: 0, width: TS, height: TS },

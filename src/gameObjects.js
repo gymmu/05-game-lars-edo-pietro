@@ -202,7 +202,7 @@ export function mushroomRPG(x, y) {
   ])
 }
 
-export function castleRPG(x, y) {
+export function castleRPG() {
   k.add([
     k.sprite("castle"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -212,7 +212,7 @@ export function castleRPG(x, y) {
   ])
 }
 
-export function book_1RPG(x, y) {
+export function book_1RPG() {
   k.add([
     k.sprite("book_1"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -221,7 +221,7 @@ export function book_1RPG(x, y) {
   ])
 }
 
-export function book_2RPG(x, y) {
+export function book_2RPG() {
   k.add([
     k.sprite("book_2"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -230,7 +230,7 @@ export function book_2RPG(x, y) {
   ])
 }
 
-export function book_3RPG(x, y) {
+export function book_3RPG() {
   k.add([
     k.sprite("book_3"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -239,7 +239,7 @@ export function book_3RPG(x, y) {
   ])
 }
 
-export function groundRPG(x, y) {
+export function groundRPG() {
   k.add([
     k.sprite("ground"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
@@ -250,7 +250,7 @@ export function groundRPG(x, y) {
   ])
 }
 
-export function lamp_onRPG(x, y) {
+export function lamp_onRPG() {
   k.add([
     k.sprite("lamp_on"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -259,7 +259,7 @@ export function lamp_onRPG(x, y) {
   ])
 }
 
-export function lamp_offRPG(x, y) {
+export function lamp_offRPG() {
   k.add([
     k.sprite("lamp_off"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -268,7 +268,7 @@ export function lamp_offRPG(x, y) {
   ])
 }
 
-export function ground2RPG(x, y) {
+export function ground2RPGRPG() {
   k.add([
     k.sprite("ground_2"),
     k.pos(x * TILESIZE, y * TILESIZE),
