@@ -12,9 +12,9 @@ import "./finish.js"
 k.scene("level-03", async () => {
   k.setGravity(0)
   loadKeyboardRPG()
-
+  console.log("ok")
   await generateCastleRPG("maps/level-03.txt")
-
+  console.log("not ok")
   addGeneralGameLogic()
 
   k.onCollide("player", "cave", (player) => {
