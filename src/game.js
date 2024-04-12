@@ -45,6 +45,12 @@ export const k = kaboom({
  * aufrufen, damit die Graphiken auch verfügbar sind.
  */
 loadSprites()
+k.loadSound("spiderman", "music/spiderman.mp3")
+
+const music = play("spiderman", {
+  loop: true,
+  paused: false,
+})
 
 /**
  * Diese Funktion erstellt die generelle Spiellogik die in allen Levels gilt.
