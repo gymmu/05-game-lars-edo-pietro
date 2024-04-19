@@ -10,6 +10,14 @@ import "./level-03.js"
  * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
  */
 k.scene("level-02", async () => {
+  k.add([
+    //background einfügung
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   k.setGravity(0)
   loadKeyboardRPG()
   k.camScale(2)

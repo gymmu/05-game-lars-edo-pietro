@@ -20,6 +20,13 @@ import "./lose.js"
  *
  */
 k.scene("level-01", async () => {
+  k.add([
+    //background einfügung
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-50),
+  ])
   // Wir stellen die Gravitation ein, damit es sich um ein Jump'n'Run-Spiel
   // handelt.
   k.setGravity(1200)
