@@ -1,6 +1,6 @@
 wwwwwwwwwwwwwcwwwwwwwwwwwwwwwwww
-s......m..........ttttt..tt....s
-s...m........tttttttt..tt....s
+s......m..........ttttttt......s
+s...m........tttttttttt........s
 s......tttttttttttt.........ttts
 s.......tttt...tttttttttt....m.s
 stttt...tttt...t......ff.......s
@@ -15,6 +15,6 @@ s..tttttttttttttttttttttt...ttts
 s...r...........m....tttt...ttts
 s.........m..........tttt...ttts
 sttttttttttttt....t....tt...ttts
-sp.....m........ttt...f.....ttts
-s...ff.........m............r..s
+sp.....m.........tt...f......tts
+s...ff....r.c..m............r..s
 ssssssssssssssssssssssssssssssss

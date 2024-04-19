@@ -243,10 +243,6 @@ export function lamp_on(x, y) {
     // Mit `isConsumable` könnten wir prüfen das dieses Objekt nur
     // aufgelesen wird, wenn der Spieler die Eigenschaft `kochen` erlernt
     // hat.
-    {
-      isConsumable: true,
-      dmgAmount: 10,
-    },
   ])
 }
 
@@ -293,5 +289,15 @@ export function monster_blume(x, y) {
       isConsumable: true,
       dmgAmount: 25,
     },
+  ])
+}
+
+export function stonewall(x, y) {
+  k.add([
+    k.sprite("stonewall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+    "obstacle",
   ])
 }

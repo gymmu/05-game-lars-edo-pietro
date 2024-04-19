@@ -11,7 +11,7 @@ import "./lose.js"
  * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
  */
 k.scene("level-04", async () => {
-  k.camScale(2)
+  k.camScale(0.75)
   k.setGravity(0)
   loadKeyboardRPG()
   console.log("ok")
