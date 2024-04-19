@@ -282,3 +282,16 @@ export function castle(x, y) {
     "castle",
   ])
 }
+
+export function monster_blume(x, y) {
+  k.add([
+    k.sprite("boese_kek"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.area(),
+    "obstacle",
+    {
+      isConsumable: true,
+      dmgAmount: 1,
+    },
+  ])
+}

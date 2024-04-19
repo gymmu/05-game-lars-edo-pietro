@@ -52,6 +52,10 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.treeJumpAndRun(x, y)
       } else if (char === "c") {
         GameObjects.castle(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
+      } else if (char === "m") {
+        GameObjects.monster_blume(x, y)
       }
     }
   }
@@ -94,6 +98,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.mushroomRPG(x, y)
       } else if (char === "g") {
         GameObjects.castle(x, y)
+      } else if (char === "k") {
+        GameObjects.monster_blume(x, y)
       }
     }
   }
