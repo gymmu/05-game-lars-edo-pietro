@@ -12,6 +12,6 @@ s.tttst.....t...t....ttt.ttts
 s.ttttt......t.......ttt.ttts
 s.tttttttttttttttttttttt.ttts
 s...................tttt.ttts
-sttttttttttttt.c.t...tt..ttts
+sttttttttttttt...t...tt..ttts
 sp.....f........ttt......ttts
 sssssssssssssssssssssssssssss
