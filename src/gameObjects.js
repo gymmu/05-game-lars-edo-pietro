@@ -202,37 +202,22 @@ export function mushroomRPG(x, y) {
   ])
 }
 
-export function castleRPG(x, y) {
+export function boese_kekRPG(x, y) {
   k.add([
-    k.sprite("castle"),
+    k.sprite("boese_kek"),
     k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
     k.area(),
-    "castle",
+    "obstacle",
+    {
+      isConsumable: true,
+      dmgAmount: 1,
+    },
   ])
 }
 
 export function book_1RPG(x, y) {
   k.add([
-    k.sprite("book_1"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-export function book_2RPG(x, y) {
-  k.add([
-    k.sprite("book_2"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-export function book_3RPG(x, y) {
-  k.add([
-    k.sprite("book_3"),
+    k.sprite("bookshelf"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
@@ -241,7 +226,7 @@ export function book_3RPG(x, y) {
 
 export function groundRPG(x, y) {
   k.add([
-    k.sprite("ground"),
+    k.sprite("stone"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
     // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
@@ -262,15 +247,6 @@ export function lamp_onRPG(x, y) {
 export function lamp_offRPG(x, y) {
   k.add([
     k.sprite("lamp_off"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.body({ isStatic: true }),
-    k.area(),
-  ])
-}
-
-export function ground2RPGRPG(x, y) {
-  k.add([
-    k.sprite("ground_2"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),

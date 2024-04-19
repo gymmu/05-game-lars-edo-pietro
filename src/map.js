@@ -111,20 +111,16 @@ export async function generateCastleRPG(mapfile) {
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-      } else if (char === "s") {
+      } else if (char === ".") {
         GameObjects.groundRPG(x, y)
-      } else if (char === "w") {
+      } else if (char === "s") {
         GameObjects.book_1RPG(x, y)
       } else if (char === "c") {
-        GameObjects.book_2RPG(x, y)
-      } else if (char === "T") {
-        GameObjects.book_3RPG(x, y)
-      } else if (char === "t") {
         GameObjects.lamp_offRPG(x, y)
       } else if (char === "f") {
         GameObjects.lamp_onRPG(x, y)
-      } else if (char === "m") {
-        GameObjects.ground2RPG(x, y)
+      } else if (char === "o") {
+        GameObjects.boese_kekRPG(x, y)
       }
     }
   }
