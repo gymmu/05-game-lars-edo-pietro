@@ -50,6 +50,8 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.goalJumpAndRun(x, y)
       } else if (char === "t") {
         GameObjects.treeJumpAndRun(x, y)
+      } else if (char === "c") {
+        GameObjects.castle(x, y)
       }
     }
   }
@@ -90,6 +92,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.flowerRPG(x, y)
       } else if (char === "m") {
         GameObjects.mushroomRPG(x, y)
+      } else if (char === "g") {
+        GameObjects.castle(x, y)
       }
     }
   }
@@ -119,6 +123,8 @@ export async function generateKerker(mapfile) {
         GameObjects.lamp_on(x, y)
       } else if (char === "r") {
         GameObjects.rose(x, y)
+      } else if (char === "c") {
+        GameObjects.castle(x, y)
       }
     }
   }

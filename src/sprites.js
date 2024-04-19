@@ -51,7 +51,7 @@ export default function loadSprites() {
   })
 
   k.loadSpriteAtlas("sprites/spritesheet.png", {
-    bookshelf: { x: 1 * TS, y: 0 * TS, width: TS, height: TS },
+    bookshelf: { x: 2 * TS, y: 0 * TS, width: TS, height: TS },
     stone2: { x: 1 * TS, y: 2 * TS, width: TS, height: TS },
     dirt: { x: 1 * TS, y: 1 * TS, width: TS, height: TS },
     lamp_off: { x: 0, y: 0, width: TS, height: TS },
