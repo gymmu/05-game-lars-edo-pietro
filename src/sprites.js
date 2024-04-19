@@ -63,4 +63,6 @@ export default function loadSprites() {
 
   k.loadSprite("background", "sprites/Himmel.png")
   k.loadSprite("background_castle", "sprites/castle_background.png")
+  k.loadSprite("background_NY_Spiderman", "sprites/new york.png")
+  k.loadSprite("spidy_web", "sprites/spidy_web.png")
 }

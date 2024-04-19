@@ -22,7 +22,10 @@ import "./lose.js"
 k.scene("level-01", async () => {
   k.add([
     //background einfügung
-    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.sprite("background_NY_Spiderman", {
+      width: k.width(),
+      height: k.height(),
+    }),
     k.pos(0, 0),
     k.fixed(),
     k.z(-50),

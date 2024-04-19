@@ -40,7 +40,7 @@ export function loadKeyboardJumpAndRun() {
   k.onKeyPress("e", () => {
     const pos = player.pos
     k.add([
-      k.sprite("stone"),
+      k.sprite("spidy_web"),
       k.pos(pos.x + TILESIZE, pos.y),
       k.area(),
       k.move(k.RIGHT, 300),
