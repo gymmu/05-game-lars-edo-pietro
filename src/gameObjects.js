@@ -295,3 +295,12 @@ export function monster_blume(x, y) {
     },
   ])
 }
+
+export function spidy_web(x, y) {
+  k.add([
+    k.sprite("spidy_web"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
