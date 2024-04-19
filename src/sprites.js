@@ -49,11 +49,13 @@ export default function loadSprites() {
   })
 
   k.loadSpriteAtlas("sprites/spritesheet.png", {
-    bookshelf: { x: 1 * TS, y: 1 * TS, width: TS, height: TS },
-    stone: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
-    dirt: { x: 0, y: 1 * TS, width: TS, height: TS },
+    bookshelf: { x: 1 * TS, y: 0 * TS, width: TS, height: TS },
+    stone2: { x: 1 * TS, y: 2 * TS, width: TS, height: TS },
+    dirt: { x: 1 * TS, y: 1 * TS, width: TS, height: TS },
     lamp_off: { x: 0, y: 0, width: TS, height: TS },
     lamp_on: { x: 1 * TS, y: 0, width: TS, height: TS },
-    boese_kek: { x: 2 * TS, y: 0 * TS, width: TS, height: TS },
+    boese_kek: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
+    rose: { x: 0 * TS, y: 2 * TS, width: TS, height: TS },
+    castle: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
   })
 }
