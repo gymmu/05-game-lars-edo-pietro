@@ -60,4 +60,7 @@ export default function loadSprites() {
     rose: { x: 0 * TS, y: 2 * TS, width: TS, height: TS },
     castle: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
   })
+
+  k.loadSprite("background", "sprites/Himmel.png")
+  k.loadSprite("background_castle", "sprites/castle_background.png")
 }

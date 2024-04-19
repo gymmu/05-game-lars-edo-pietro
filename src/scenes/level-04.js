@@ -11,6 +11,14 @@ import "./lose.js"
  * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
  */
 k.scene("level-04", async () => {
+  k.add([
+    //background einfügung
+    k.sprite("background_castle", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   k.camScale(2)
   k.setGravity(0)
   loadKeyboardRPG()

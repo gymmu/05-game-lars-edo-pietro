@@ -22,6 +22,14 @@ k.scene("level-03", async () => {
   // handelt.
   k.setGravity(1200)
 
+  k.add([
+    //background einfügung
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   // Wir laden die Tasenbelegung für ein Jump'n'Run-Spiel.
   loadKeyboardJumpAndRun()
 
