@@ -38,7 +38,7 @@ k.scene("level-03", async () => {
   // verwendet wird.
   // Hier ist es so das wenn der Spieler mit dem "goal" kollidiert, dann
   // kommen wir ins nächste Level.
-  k.onCollide("player", "goal", () => {
+  k.onCollide("player", "castle", () => {
     k.go("level-04")
   })
 

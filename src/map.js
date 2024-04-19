@@ -50,6 +50,8 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.goalJumpAndRun(x, y)
       } else if (char === "t") {
         GameObjects.treeJumpAndRun(x, y)
+      } else if (char === "c") {
+        GameObjects.castle(x, y)
       }
     }
   }
@@ -90,12 +92,14 @@ export async function generateMapRPG(mapfile) {
         GameObjects.flowerRPG(x, y)
       } else if (char === "m") {
         GameObjects.mushroomRPG(x, y)
+      } else if (char === "g") {
+        GameObjects.castle(x, y)
       }
     }
   }
 }
 
-export async function generateCastleRPG(mapfile) {
+export async function generateKerker(mapfile) {
   const map = await fetch(mapfile)
   const mapContent = await map.text()
   const lines = mapContent.split("\n")
@@ -106,21 +110,21 @@ export async function generateCastleRPG(mapfile) {
 
       // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
       // hat.
-      GameObjects.backgroundRPG(x, y)
+      GameObjects.stone_background(x, y)
 
       if (char === "p") {
         const player = getPlayer()
         player.pos = k.vec2(x, y).scale(TILESIZE)
-      } else if (char === ".") {
-        GameObjects.groundRPG(x, y)
-      } else if (char === "s") {
-        GameObjects.book_1RPG(x, y)
+      } else if (char === "b") {
+        GameObjects.bookshelf(x, y)
+      } else if (char === "-") {
+        GameObjects.lamp_off(x, y)
+      } else if (char === "+") {
+        GameObjects.lamp_on(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
       } else if (char === "c") {
-        GameObjects.lamp_offRPG(x, y)
-      } else if (char === "f") {
-        GameObjects.lamp_onRPG(x, y)
-      } else if (char === "o") {
-        GameObjects.boese_kekRPG(x, y)
+        GameObjects.castle(x, y)
       }
     }
   }

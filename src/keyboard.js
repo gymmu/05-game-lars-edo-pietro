@@ -34,7 +34,7 @@ export function loadKeyboardJumpAndRun() {
   })
 
   k.onKeyPress("space", () => {
-    player.jump()
+    player.jump("jump")
   })
 
   k.onKeyPress("e", () => {

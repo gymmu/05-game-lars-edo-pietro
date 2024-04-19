@@ -7,3 +7,5 @@
  * Kachelgrösse auf 64 ändern möchten, müssen Sie das nur hier machen.
  */
 export const TILESIZE = 32
+
+export const CARACHTERTILESIZE = 48

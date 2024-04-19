@@ -202,20 +202,7 @@ export function mushroomRPG(x, y) {
   ])
 }
 
-export function boese_kekRPG(x, y) {
-  k.add([
-    k.sprite("boese_kek"),
-    k.pos(x * TILESIZE, y * TILESIZE),
-    k.area(),
-    "obstacle",
-    {
-      isConsumable: true,
-      dmgAmount: 1,
-    },
-  ])
-}
-
-export function book_1RPG(x, y) {
+export function bookshelf(x, y) {
   k.add([
     k.sprite("bookshelf"),
     k.pos(x * TILESIZE, y * TILESIZE),
@@ -224,9 +211,19 @@ export function book_1RPG(x, y) {
   ])
 }
 
-export function groundRPG(x, y) {
+export function stone_background(x, y) {
   k.add([
-    k.sprite("stone"),
+    k.sprite("stone2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
+    // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
+    // überlagert wird.
+    k.z(-10),
+  ])
+}
+export function dirt(x, y) {
+  k.add([
+    k.sprite("dirt"),
     k.pos(k.vec2(x, y).scale(TILESIZE)),
     // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
     // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
@@ -235,20 +232,53 @@ export function groundRPG(x, y) {
   ])
 }
 
-export function lamp_onRPG(x, y) {
+export function lamp_on(x, y) {
   k.add([
     k.sprite("lamp_on"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    "obstacle",
+    // Hier können wir zusätzliche Eigenschaften von einem Spielobjekt angeben.
+    // Mit `isConsumable` könnten wir prüfen das dieses Objekt nur
+    // aufgelesen wird, wenn der Spieler die Eigenschaft `kochen` erlernt
+    // hat.
+    {
+      isConsumable: true,
+      dmgAmount: 10,
+    },
+  ])
+}
+
+export function lamp_off(x, y) {
+  k.add([
+    k.sprite("lamp_off"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
   ])
 }
 
-export function lamp_offRPG(x, y) {
+export function rose(x, y) {
   k.add([
-    k.sprite("lamp_off"),
+    k.sprite("rose"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    "heal",
+    {
+      isConsumable: true,
+      healAmount: 10,
+    },
+  ])
+}
+
+export function castle(x, y) {
+  k.add([
+    k.sprite("castle"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+    "castle",
   ])
 }
