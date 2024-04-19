@@ -9,7 +9,7 @@
                                                     --------dddddddddd-----
                                                    --------dddddddddddd-------
                   ooo   r                            dddddddddddddddddddddddd            m
-   p    g     o  ------------   ff         o   fff   ddddddddddddddddddddddddddd        -------g---
+   p          o  ------------   ff         o   fff   ddddddddddddddddddddddddddd        -------g---
 ------------------------------------       --------------------------------------------------------
 
 
@@ -21,7 +21,7 @@
                                                          ------
 
                                                                      ------
-                                                                     
+
                                                                                  -------
 
                                                                                           ------
