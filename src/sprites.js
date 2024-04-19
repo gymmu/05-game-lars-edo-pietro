@@ -60,4 +60,8 @@ export default function loadSprites() {
     rose: { x: 0 * TS, y: 2 * TS, width: TS, height: TS },
     castle: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
   })
+
+  k.loadSpriteAtlas("sprites/Himmel.png", {
+    Himmel: { x: 0, y: 0, width: TS, height: TS },
+  })
 }

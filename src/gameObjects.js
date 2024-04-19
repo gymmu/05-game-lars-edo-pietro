@@ -197,7 +197,7 @@ export function mushroomRPG(x, y) {
     "obstacle",
     {
       isConsumable: true,
-      dmgAmount: 1,
+      dmgAmount: 8, // Schaden, der dem Spieler zugefügt wird.
     },
   ])
 }
@@ -268,7 +268,7 @@ export function rose(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 10,
+      healAmount: 25,
     },
   ])
 }
@@ -291,7 +291,7 @@ export function monster_blume(x, y) {
     "obstacle",
     {
       isConsumable: true,
-      dmgAmount: 1,
+      dmgAmount: 25,
     },
   ])
 }

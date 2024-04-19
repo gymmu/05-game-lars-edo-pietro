@@ -5,6 +5,7 @@ import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./level-02.js"
 import "./lose.js"
+import { backgroundRPG } from "../gameObjects.js"
 
 /** Das ist unser erstes Level. Hier können wir Dinge einstellen die nur für
  * dieses Level gelten sollen, und aber auch Funktionen verwenden die in allen
