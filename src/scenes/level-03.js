@@ -50,7 +50,7 @@ k.scene("level-03", async () => {
   k.onUpdate(() => {
     const player = k.get("player")[0]
     if (player.pos.y > 720) {
-      k.go("lose")
+      //k.go("lose")
     }
   })
 })

@@ -96,6 +96,7 @@ export function addGeneralGameLogic() {
   player.on("heal", () => {
     const oldSpeed = player.speed
     player.speed *= 1.5
+    if (player.speed > 300) player.speed = 300
     k.wait(1, () => {
       player.speed = oldSpeed
     })
