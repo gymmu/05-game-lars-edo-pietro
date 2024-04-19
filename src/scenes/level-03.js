@@ -3,7 +3,6 @@ import { generateMapJumpAndRun } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
 import "./level-04.js"
-import "./lose.js"
 
 /** Das ist unser erstes drittes Level. Hier können wir Dinge einstellen die nur für
  * dieses Level gelten sollen, und aber auch Funktionen verwenden die in allen

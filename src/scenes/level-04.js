@@ -3,6 +3,7 @@ import { generateCastleRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
 import "./finish.js"
+import "./lose.js"
 
 /**
  * Szene für das Level 4.
