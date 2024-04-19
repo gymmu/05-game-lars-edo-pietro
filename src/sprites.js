@@ -1,5 +1,6 @@
 import { TILESIZE as TS } from "./globals"
 import { k } from "./game.js"
+import { CARACHTERTILESIZE as CS } from "./globals"
 
 /**
  * Diese Funktion soll alle Spritesheets in das Spiel laden.
@@ -11,13 +12,13 @@ import { k } from "./game.js"
  * damit können einfach andere Atmosphären im Spiel erzeugt werden.
  */
 export default function loadSprites() {
-  k.loadSpriteAtlas("sprites/char.png", {
+  k.loadSpriteAtlas("sprites/spiderman_char.png", {
     hero: {
       // Alles war hier kommt, gehört zum Sprite `hero`
       x: 0, // x-Koordinate des Pixels wo das Sprite beginnt.
       y: 0, // y-Koordinate des Pixels wo das Sprite beginnt.
-      width: 3 * TS, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
-      height: 4 * TS, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
+      width: 3 * CS, // Die Breite des Sprites in Pixeln. Hier sind jeweils 3 Animationen nebeneinander, deshalb 3 * TILESIZE
+      height: 4 * CS, // Die Höhe des Sprites in Pixeln. Hier sind die 4 Laufrichtungen untereinander, deshalb 4 * TILESIZE
       sliceX: 3, // In der x-Richtung sind es 3 Kacheln, so wird es gleichmässig aufgeteilt.
       sliceY: 4, // In der y-Richtung sind es 4 Kacheln, so wird es gleichmässig aufgeteilt.
       anims: {
@@ -30,6 +31,7 @@ export default function loadSprites() {
         idleRight: 7,
         runUp: { from: 9, to: 11, loop: true, speed: 5 },
         idleUp: 10,
+        jump: { from: 13, to: 15, loop: true, speed: 5 }, // Hier wird die Animation zum Sprung gesetzt.
       },
     },
   })
