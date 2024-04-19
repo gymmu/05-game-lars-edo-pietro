@@ -197,7 +197,7 @@ export function mushroomRPG(x, y) {
     "obstacle",
     {
       isConsumable: true,
-      dmgAmount: 1,
+      dmgAmount: 8, // Schaden, der dem Spieler zugefügt wird.
     },
   ])
 }
@@ -243,10 +243,6 @@ export function lamp_on(x, y) {
     // Mit `isConsumable` könnten wir prüfen das dieses Objekt nur
     // aufgelesen wird, wenn der Spieler die Eigenschaft `kochen` erlernt
     // hat.
-    {
-      isConsumable: true,
-      dmgAmount: 10,
-    },
   ])
 }
 
@@ -268,7 +264,7 @@ export function rose(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 10,
+      healAmount: 25,
     },
   ])
 }
@@ -291,16 +287,26 @@ export function monster_blume(x, y) {
     "obstacle",
     {
       isConsumable: true,
-      dmgAmount: 1,
+      dmgAmount: 25,
     },
   ])
 }
 
+<<<<<<< HEAD
 export function spidy_web(x, y) {
   k.add([
     k.sprite("spidy_web"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
+=======
+export function stonewall(x, y) {
+  k.add([
+    k.sprite("stonewall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+    "obstacle",
+>>>>>>> 151d8c52c0ebf6e51a4397a737bd4bb24f9fda47
   ])
 }

@@ -33,7 +33,7 @@ export default function createPlayer() {
     // Hier können Eigenschaften für den Spieler festgehalten werden, diese
     // können dann im Rest des Spiels verwendet werden.
     {
-      speed: TILESIZE * 3,
+      speed: TILESIZE * 7,
       dir: null,
       dead: false,
       max_hp: 200,

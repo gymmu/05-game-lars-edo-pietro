@@ -56,6 +56,8 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.rose(x, y)
       } else if (char === "m") {
         GameObjects.monster_blume(x, y)
+      } else if (char === "d") {
+        GameObjects.dirt(x, y)
       }
     }
   }
@@ -100,6 +102,8 @@ export async function generateMapRPG(mapfile) {
         GameObjects.castle(x, y)
       } else if (char === "k") {
         GameObjects.monster_blume(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
       }
     }
   }
@@ -123,14 +127,16 @@ export async function generateKerker(mapfile) {
         player.pos = k.vec2(x, y).scale(TILESIZE)
       } else if (char === "b") {
         GameObjects.bookshelf(x, y)
-      } else if (char === "-") {
+      } else if (char === "l") {
         GameObjects.lamp_off(x, y)
-      } else if (char === "+") {
+      } else if (char === "o") {
         GameObjects.lamp_on(x, y)
       } else if (char === "r") {
         GameObjects.rose(x, y)
       } else if (char === "c") {
         GameObjects.castle(x, y)
+      } else if (char === "s") {
+        GameObjects.stonewall(x, y)
       }
     }
   }

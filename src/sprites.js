@@ -59,6 +59,11 @@ export default function loadSprites() {
     boese_kek: { x: 2 * TS, y: 1 * TS, width: TS, height: TS },
     rose: { x: 0 * TS, y: 2 * TS, width: TS, height: TS },
     castle: { x: 0 * TS, y: 1 * TS, width: TS, height: TS },
+    stonewall: { x: 2 * TS, y: 2 * TS, width: TS, height: TS },
+  })
+
+  k.loadSpriteAtlas("sprites/Himmel.png", {
+    Himmel: { x: 0, y: 0, width: TS, height: TS },
   })
 
   k.loadSprite("background", "sprites/Himmel.png")

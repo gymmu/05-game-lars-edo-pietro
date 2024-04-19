@@ -30,9 +30,12 @@ import { getPlayer } from "./player.js"
  * anpassen, dass es für Sie stimmt. Am besten verwenden Sie hier ein
  * vielfaches von TILESIZE.
  */
+
 export const k = kaboom({
   font: "sinko",
   background: [135, 206, 235],
+  fullscreen: true,
+  scale: 1.5,
   debug: true,
   height: TILESIZE * 16,
   width: TILESIZE * 30,
