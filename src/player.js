@@ -18,7 +18,7 @@ export default function createPlayer() {
 
     // Gibt dem Spieler Lebenspunkte und die möglichkeit über die Funktionen
     // `hurt` und `heal` mit dem Spieler zu interagieren.
-    k.health(50),
+    k.health(200),
 
     // Damit wird der Spieler nicht zerstört wenn die Szene gewechselt wird.
     // Der Spieler muss dann aber bei GameOver und ähnlichen Szenen von
@@ -33,10 +33,10 @@ export default function createPlayer() {
     // Hier können Eigenschaften für den Spieler festgehalten werden, diese
     // können dann im Rest des Spiels verwendet werden.
     {
-      speed: TILESIZE * 5,
+      speed: TILESIZE * 7,
       dir: null,
       dead: false,
-      max_hp: 100,
+      max_hp: 200,
     },
   ])
 

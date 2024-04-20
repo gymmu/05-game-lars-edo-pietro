@@ -2,7 +2,7 @@ import { k, addGeneralGameLogic } from "../game.js"
 import { generateMapRPG } from "../map.js"
 import { loadKeyboardRPG } from "../keyboard.js"
 
-import "./finish.js"
+import "./level-03.js"
 
 /**
  * Szene für das Level 2.
@@ -10,8 +10,17 @@ import "./finish.js"
  * Hier gibt es keine Gravitation, wir sind hier in einem RPG-Setting.
  */
 k.scene("level-02", async () => {
+  k.add([
+    //background einfügung
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
+
   k.setGravity(0)
   loadKeyboardRPG()
+  k.camScale(2)
 
   await generateMapRPG("maps/level-02.txt")
 
@@ -19,7 +28,7 @@ k.scene("level-02", async () => {
 
   k.onCollide("player", "cave", (player) => {
     if (player.hasFlower === true) {
-      k.go("finish")
+      k.go("level-03")
     }
   })
 

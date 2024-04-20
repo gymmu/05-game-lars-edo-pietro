@@ -1,60 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Simple Reveal.js Presentation</title>
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/dracula.css">
-</head>
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/dist/theme/dracula.css" />
+  </head>
 
-<body>
+  <body>
     <div class="reveal">
-        <div class="slides">
+      <div class="slides">
+        <!-- Dieser Abschnitt stellt eine Folie in Reveal.js dar -->
+        <section>
+          <h1>Pilæd</h1>
+          <!-- Mit der Klasse fragment, werden Teile erst nach und nach eingeblendet.-->
+          <p class="fragment">Eduard, Pietro, Lars</p>
+        </section>
 
-            <!-- Dieser Abschnitt stellt eine Folie in Reveal.js dar -->
-            <section>
-                <h1>Demo Spiel</h1>
-                <!-- Mit der Klasse fragment, werden Teile erst nach und nach eingeblendet.-->
-                <p class="fragment">Cedric Geissmann</p>
-            </section>
+        <section>
+          <h3>Spielprinzip</h3>
+          <!-- Wenn sections verschachtelt sind, werden damit Unterfolien erstellt.-->
+          <section>
+            <h4>Level 1 auf der Erde</h4>
+            <ul>
+              <li>Bis zum Ende des Levels bzw. zur Höhle kommen</li>
+              <li>3 Rosen sammeln um fortzufahren</li>
+              <li>Giftblumen ziehen ein Leben ab</li>
+              <li>Nicht von der Plattform fallen</li>
+            </ul>
+          </section>
 
-            <section>
-                <h3>Spielprinzip</h3>
-                <!-- Wenn sections verschachtelt sind, werden damit Unterfolien erstellt.-->
-                <section>
-                    <h4>Jump'n'Run</h4>
-                    <ul>
-                        <li>Bis zum Ende des Levels kommen</li>
-                        <li>Pilze machen Schaden</li>
-                        <li>Blumen geben Lebenspunkte</li>
-                        <li>Nicht von der Plattform fallen</li>
-                    </ul>
-                </section>
+          <!-- Das hier ist dann die zweite Folie unter dem gleichen Titel.-->
+          <section>
+            <h4>Level 2 im Wald</h4>
+            <ul>
+              <li>Sammle Rosen, achte dich vor Giftblumen</li>
+              <li>
+                Zusätzlich gibt es ein Monster -> in vorheriges Level durch
+                Berührung
+              </li>
+              <li>Komm bis zu Höhle</li>
+            </ul>
+          </section>
 
-                <!-- Das hier ist dann die zweite Folie unter dem gleichen Titel.-->
-                <section>
-                    <h4>RPG</h4>
-                    <ul>
-                        <li>Pilze machen Schaden</li>
-                        <li>Blumen geben Lebenspunkte</li>
-                        <li>Man muss eine Blume sammeln um das Spiel zu beenden</li>
-                        <li>Höle am Ende des Levels betreten</li>
-                    </ul>
-                </section>
-            </section>
+          <!-- Das hier ist die dritte Folie unter dem gleichen Titel.-->
+          <section>
+            <h4>Level 3 vom Wald zum Himmel</h4>
+            <ul>
+              <li>gleiche Voraussetzungen doch ohne das Monster</li>
+            </ul>
+          </section>
 
-            <!-- Die letzte Folie soll einen direkten Link zum Spiel sein. -->
-            <section>
-                <a href="game.html" target="_blank">Demo</a>
-            </section>
+          <section>
+            <h4>Level 4 im Kerker</h4>
+            <ul>
+              <li>Wieder Rosen und Monster</li>
+              <li>
+                Man hat nur ein Versuch sonst bleibt man für immer im Kerker
+              </li>
+            </ul>
+          </section>
+        </section>
 
-        </div>
+        <!-- Neue Folie mit den Schwierigkeiten und unten dran die Lösungen-->
+        <section>
+          <section>
+            <h2>Schwierigkeiten</h2>
+            <ul>
+              <li>Einen Hintergrund zu erstellen</li>
+              <li>
+                Die selbstgemalten Zeichnungen der App "Procrate" einfügen
+              </li>
+              <li>Beim mergen am Ende gab es oft Probleme</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Lösungen</h2>
+            <ul>
+              <li>
+                Wir haben uns informiert und Hilfe (online, Herr Geissmann,
+                andere Schülerinnen) geholt
+              </li>
+              <li>die Zeichnungen in der App "Libresprite" zeichnen</li>
+            </ul>
+          </section>
+        </section>
+        <!-- Die letzte Folie soll einen direkten Link zum Spiel sein. -->
+        <section>
+          <a href="game.html" target="_blank">Demo</a>
+        </section>
+      </div>
     </div>
     <script type="module">
-        import Reveal from 'reveal.js';
-        Reveal.initialize();
+      import Reveal from "reveal.js"
+      Reveal.initialize()
     </script>
-</body>
-
+  </body>
 </html>

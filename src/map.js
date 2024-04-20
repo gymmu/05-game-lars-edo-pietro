@@ -48,6 +48,16 @@ export async function generateMapJumpAndRun(mapfile) {
         GameObjects.flowerJumpAndRun(x, y)
       } else if (char === "g") {
         GameObjects.goalJumpAndRun(x, y)
+      } else if (char === "t") {
+        GameObjects.treeJumpAndRun(x, y)
+      } else if (char === "c") {
+        GameObjects.castle(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
+      } else if (char === "m") {
+        GameObjects.monster_blume(x, y)
+      } else if (char === "d") {
+        GameObjects.dirt(x, y)
       }
     }
   }
@@ -88,6 +98,45 @@ export async function generateMapRPG(mapfile) {
         GameObjects.flowerRPG(x, y)
       } else if (char === "m") {
         GameObjects.mushroomRPG(x, y)
+      } else if (char === "g") {
+        GameObjects.castle(x, y)
+      } else if (char === "k") {
+        GameObjects.monster_blume(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
+      }
+    }
+  }
+}
+
+export async function generateKerker(mapfile) {
+  const map = await fetch(mapfile)
+  const mapContent = await map.text()
+  const lines = mapContent.split("\n")
+  for (let y = 0; y < lines.length; y++) {
+    const line = lines[y]
+    for (let x = 0; x < line.length; x++) {
+      const char = line[x]
+
+      // Das wird bei jeder Kachel hinzugefügt, damit alles einen Hintergrund
+      // hat.
+      GameObjects.stone_background(x, y)
+
+      if (char === "p") {
+        const player = getPlayer()
+        player.pos = k.vec2(x, y).scale(TILESIZE)
+      } else if (char === "b") {
+        GameObjects.bookshelf(x, y)
+      } else if (char === "l") {
+        GameObjects.lamp_off(x, y)
+      } else if (char === "o") {
+        GameObjects.lamp_on(x, y)
+      } else if (char === "r") {
+        GameObjects.rose(x, y)
+      } else if (char === "c") {
+        GameObjects.castle(x, y)
+      } else if (char === "s") {
+        GameObjects.stonewall(x, y)
       }
     }
   }

@@ -71,7 +71,7 @@ export function flowerJumpAndRun(x, y) {
     "heal",
     {
       isConsumable: true,
-      healAmount: 5,
+      healAmount: 10,
     },
   ])
 }
@@ -197,6 +197,116 @@ export function mushroomRPG(x, y) {
     "obstacle",
     {
       isConsumable: true,
+      dmgAmount: 8, // Schaden, der dem Spieler zugefügt wird.
     },
+  ])
+}
+
+export function bookshelf(x, y) {
+  k.add([
+    k.sprite("bookshelf"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function stone_background(x, y) {
+  k.add([
+    k.sprite("stone2"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
+    // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
+    // überlagert wird.
+    k.z(-10),
+  ])
+}
+export function dirt(x, y) {
+  k.add([
+    k.sprite("dirt"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    // `z` wird hier verwendet um diese Kachel weiter im Hintergrund zu
+    // zeichnen, damit das eigentliche Spielobjekt auf dem Feld nicht
+    // überlagert wird.
+    k.z(-10),
+  ])
+}
+
+export function lamp_on(x, y) {
+  k.add([
+    k.sprite("lamp_on"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    "obstacle",
+    // Hier können wir zusätzliche Eigenschaften von einem Spielobjekt angeben.
+    // Mit `isConsumable` könnten wir prüfen das dieses Objekt nur
+    // aufgelesen wird, wenn der Spieler die Eigenschaft `kochen` erlernt
+    // hat.
+  ])
+}
+
+export function lamp_off(x, y) {
+  k.add([
+    k.sprite("lamp_off"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function rose(x, y) {
+  k.add([
+    k.sprite("rose"),
+    k.pos(k.vec2(x, y).scale(TILESIZE)),
+    k.body({ isStatic: true }),
+    k.area(),
+    "heal",
+    {
+      isConsumable: true,
+      healAmount: 25,
+    },
+  ])
+}
+
+export function castle(x, y) {
+  k.add([
+    k.sprite("castle"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+    "castle",
+  ])
+}
+
+export function monster_blume(x, y) {
+  k.add([
+    k.sprite("boese_kek"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.area(),
+    "obstacle",
+    {
+      isConsumable: true,
+      dmgAmount: 25,
+    },
+  ])
+}
+
+export function spidy_web(x, y) {
+  k.add([
+    k.sprite("spidy_web"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+  ])
+}
+
+export function stonewall(x, y) {
+  k.add([
+    k.sprite("stonewall"),
+    k.pos(x * TILESIZE, y * TILESIZE),
+    k.body({ isStatic: true }),
+    k.area(),
+    "obstacle",
   ])
 }

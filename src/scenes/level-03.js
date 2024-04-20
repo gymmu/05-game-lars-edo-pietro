@@ -1,13 +1,10 @@
 import { k, addGeneralGameLogic } from "../game.js"
-import createPlayer from "../player.js"
 import { generateMapJumpAndRun } from "../map.js"
 import { loadKeyboardJumpAndRun } from "../keyboard.js"
 
-import "./level-02.js"
-import "./lose.js"
-import { backgroundRPG } from "../gameObjects.js"
+import "./level-04.js"
 
-/** Das ist unser erstes Level. Hier können wir Dinge einstellen die nur für
+/** Das ist unser erstes drittes Level. Hier können wir Dinge einstellen die nur für
  * dieses Level gelten sollen, und aber auch Funktionen verwenden die in allen
  * Levels gleich sind.
  *
@@ -16,27 +13,22 @@ import { backgroundRPG } from "../gameObjects.js"
  * müssen bis diese beendet ist. Dieses warten passiert mit dem Schlüsselwort
  * `await`.
  *
- * Bei diesem ersten Level handelt es sich um ein Jump'n'Run-Spiel. Da müssen
+ * Bei diesem dritten Level handelt es sich um ein Jump'n'Run-Spiel. Da müssen
  * wir einige spezialisierte Funktionen verwenden.
  *
  */
-k.scene("level-01", async () => {
-  k.add([
-    //background einfügung
-    k.sprite("background_NY_Spiderman", {
-      width: k.width(),
-      height: k.height(),
-    }),
-    k.pos(0, 0),
-    k.fixed(),
-    k.z(-50),
-  ])
+k.scene("level-03", async () => {
   // Wir stellen die Gravitation ein, damit es sich um ein Jump'n'Run-Spiel
   // handelt.
   k.setGravity(1200)
 
-  // Wir erstellen den Spieler
-  createPlayer()
+  k.add([
+    //background einfügung
+    k.sprite("background", { width: k.width(), height: k.height() }),
+    k.pos(0, 0),
+    k.fixed(),
+    k.z(-100),
+  ])
 
   // Wir laden die Tasenbelegung für ein Jump'n'Run-Spiel.
   loadKeyboardJumpAndRun()
@@ -44,7 +36,7 @@ k.scene("level-01", async () => {
   // Hier lassen wir die Spielwelt erstellen.
   // Wir müssen dieser Funktion auch den Spieler übergeben, damit die
   // Position vom Spieler richtig gesetzt werden kann.
-  await generateMapJumpAndRun("maps/level-01.txt")
+  await generateMapJumpAndRun("maps/level-03.txt")
 
   // Hier laden wir die generelle Spiellogik. Also was passieren soll wenn
   // der Spieler mit einem Objekt kollidiert.
@@ -54,8 +46,8 @@ k.scene("level-01", async () => {
   // verwendet wird.
   // Hier ist es so das wenn der Spieler mit dem "goal" kollidiert, dann
   // kommen wir ins nächste Level.
-  k.onCollide("player", "goal", () => {
-    k.go("level-02")
+  k.onCollide("player", "castle", () => {
+    k.go("level-04")
   })
 
   // Diese Funktion wird bei jedem Frame ausgeführt. Bei einem Jump'n'Run ist
@@ -66,7 +58,7 @@ k.scene("level-01", async () => {
   k.onUpdate(() => {
     const player = k.get("player")[0]
     if (player.pos.y > 720) {
-      k.go("lose")
+      //k.go("lose")
     }
   })
 })

@@ -30,9 +30,12 @@ import { getPlayer } from "./player.js"
  * anpassen, dass es für Sie stimmt. Am besten verwenden Sie hier ein
  * vielfaches von TILESIZE.
  */
+
 export const k = kaboom({
   font: "sinko",
-  background: [0, 0, 0],
+  background: [135, 206, 235],
+  fullscreen: true,
+  scale: 1.5,
   debug: true,
   height: TILESIZE * 16,
   width: TILESIZE * 30,
@@ -45,6 +48,12 @@ export const k = kaboom({
  * aufrufen, damit die Graphiken auch verfügbar sind.
  */
 loadSprites()
+k.loadSound("spiderman", "music/spiderman.mp3")
+
+const music = play("spiderman", {
+  loop: true,
+  paused: false,
+})
 
 /**
  * Diese Funktion erstellt die generelle Spiellogik die in allen Levels gilt.
@@ -77,7 +86,7 @@ export function addGeneralGameLogic() {
    * `isConsumable`, wird das Hindernis gelöscht.
    */
   k.onCollide("obstacle", "player", (obstacle, player) => {
-    player.hurt(obstacle.dmgAmount)
+    player.hurt(obstacle.dmgAmount * 1)
     if (obstacle.isConsumable === true) {
       obstacle.destroy()
     }
@@ -89,7 +98,8 @@ export function addGeneralGameLogic() {
    */
   player.on("heal", () => {
     const oldSpeed = player.speed
-    player.speed *= 2
+    player.speed *= 1.5
+    if (player.speed > 300) player.speed = 300
     k.wait(1, () => {
       player.speed = oldSpeed
     })
@@ -110,17 +120,17 @@ function createHPBar() {
 
   const x = 50
   const y = 20
-  const HP_BAR_WIDTH = 100
+  const HP_BAR_WIDTH = 125
   const HP_BAR_HEIGHT = 10
 
   // Dies ist das UI-Element das den Rest der dazu gehört einpackt.
   const bar = k.add([k.pos(x, y), k.fixed(), k.z(10), "hp-bar"])
 
-  bar.add([k.text("HP", { size: 20 }), k.anchor("right")])
+  bar.add([k.text("HP", { size: 28 }), k.anchor("right")])
 
   bar.add([
     k.rect(HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.outline(4, k.GREEN.darken(100)),
+    k.outline(3, k.WHITE.darken(1)),
     k.color(0, 0, 0),
     k.anchor("left"),
     k.pos(10, 0),
@@ -129,7 +139,7 @@ function createHPBar() {
   // Dieser Teil zeigt den grünenden Balken an.
   bar.add([
     k.rect((player.hp() / player.max_hp) * HP_BAR_WIDTH, HP_BAR_HEIGHT),
-    k.color(0, 255, 0),
+    k.color(255, 0, 255),
     k.anchor("left"),
     k.pos(10, 0),
     {
@@ -137,6 +147,19 @@ function createHPBar() {
       update() {
         const player = getPlayer()
         this.width = (player.hp() / player.max_hp) * HP_BAR_WIDTH
+      },
+    },
+  ])
+
+  bar.add([
+    k.text(`${player.hp()}/${player.max_hp}`, { size: 12 }),
+    k.anchor("left"),
+    k.pos(50, 1.5),
+    {
+      // Damit wird in jedem Frame überprüft ob der HP-Balken angepasst werden muss.
+      update() {
+        const player = getPlayer()
+        this.text = `${player.hp()}/${player.max_hp}`
       },
     },
   ])
