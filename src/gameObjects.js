@@ -292,14 +292,15 @@ export function monster_blume(x, y) {
   ])
 }
 
-<<<<<<< HEAD
 export function spidy_web(x, y) {
   k.add([
     k.sprite("spidy_web"),
     k.pos(x * TILESIZE, y * TILESIZE),
     k.body({ isStatic: true }),
     k.area(),
-=======
+  ])
+}
+
 export function stonewall(x, y) {
   k.add([
     k.sprite("stonewall"),
@@ -307,6 +308,5 @@ export function stonewall(x, y) {
     k.body({ isStatic: true }),
     k.area(),
     "obstacle",
->>>>>>> 151d8c52c0ebf6e51a4397a737bd4bb24f9fda47
   ])
 }
